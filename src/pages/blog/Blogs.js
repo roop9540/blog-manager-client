@@ -272,9 +272,11 @@ function Blogs() {
                                             <p className="card-text">{blog?.description}</p>
                                             <div className="d-flex justify-content-around">
                                                 <a href={"blog/" + blog?.slug} className="btn btn-primary">read more</a>
-                                                <button onClick={async () => {
+                                                {user?.name === blog?.author? <button onClick={async () => {
+                                                    
                                                     deleteBlogs(blog?._id)
-                                                }} >Delete</button>
+                                                }} >Delete</button>:""}
+                                               
                                             </div>
                                         </div>
                                         <p>Author: &nbsp; {blog?.author}</p>
@@ -296,9 +298,11 @@ function Blogs() {
                                                 <p className="card-text">{blog?.description}</p>
                                                 <div className="d-flex justify-content-around">
                                                     <a href={"blog/" + blog?.slug} className="btn btn-primary">read more</a>
-                                                    <button onClick={async () => {
-                                                        deleteBlogs(blog?._id)
-                                                    }} >Delete</button>
+                                                    {user?.name === blog?.author? <button onClick={async () => {
+                                                    
+                                                    deleteBlogs(blog?._id)
+                                                }} >Delete</button>:""}
+                                                   
                                                 </div>
                                             </div>
                                             <p>Author: &nbsp; {blog?.author}</p>
