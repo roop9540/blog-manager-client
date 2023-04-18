@@ -8,7 +8,6 @@ import AboutUs from './pages/AboutUs';
 import ContactUs from './pages/ContactUs';
 import Footer from './layout/Footer';
 import Blogs from './pages/blog/Blogs';
-import EditBlogs from './pages/blog/EditBlogs';
 import BlogHome from './pages/blog/BlogHome';
 
 
@@ -19,7 +18,7 @@ function App() {
         <header className='sticky-top'>
           <Header />
         </header>
-        <main className='' >
+        <main className='home-bg' >
           <Routes >
             <Route path='/' element={<Home />} />
             <Route path='/login' element={<Login />} />

@@ -36,10 +36,11 @@ function Header() {
 
                                         {/* <NavLink to="/home" >Home</NavLink> */}
                                     </li>
-                                    <li className="nav-item m-3 fs-5">
+                                    {user.token? <li className="nav-item m-3 fs-5">
                                         {/* <a className="nav-link" href="/about">LogIn</a> */}
                                         <NavLink to="/blog" style={{ textDecoration: 'none' }}>Blog</NavLink>
-                                    </li>
+                                    </li>:""}
+                                   
                                     {!user.token ?
                                         <li className="nav-item m-3 fs-5">
                                             {/* <a className="nav-link" href="/about">LogIn</a> */}

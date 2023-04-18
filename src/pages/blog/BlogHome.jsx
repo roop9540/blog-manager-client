@@ -20,8 +20,8 @@ function BlogHome() {
         try {
         //   console.log(`public/dynamic-blog/${slug.slug}`);
           // /dynamic-blog/:slug blogs/edit/
-          const res = await axios.get( process.env.REACT_APP_API_BASE_URL+ `blog/single?slug=`+slug.slug, {headers:{
-            "content-type": "application/json"
+          const res = await axios.get( process.env.REACT_APP_API_BASE_URL+ `blog/single?slug=`+slug.slug, {headers: {
+            "Content-Type": "multipart/form-data",
           }});
           console.log("result" + res, slug.slug);
     
@@ -37,7 +37,9 @@ function BlogHome() {
 
 
     async function getBlogs() {
-        const res = await axios.get(process.env.REACT_APP_API_BASE_URL + "blog")
+        const res = await axios.get(process.env.REACT_APP_API_BASE_URL + "blog", {headers:{
+          "Content-Type": "multipart/form-data",
+        }} )
         if (res.status === 200) {
             console.log(res)
             setBlogs(res?.data?.result)

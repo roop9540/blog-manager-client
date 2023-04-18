@@ -16,6 +16,9 @@ color: blueviolet;
 main{
   min-height: 100vh;
 }
+.background{
+  background-color: aliceblue;
+}
 
 
 
